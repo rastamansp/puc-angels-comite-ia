@@ -1,0 +1,156 @@
+:root {
+  /* Colors - Microsoft Copilot Style */
+  --chat--color-primary: #0078d4; /* Microsoft Blue */
+  --chat--color-primary-shade-50: #106ebe;
+  --chat--color-primary-shade-100: #005a9e;
+  --chat--color-secondary: #107c10; /* Microsoft Green */
+  --chat--color-secondary-shade-50: #0e6b0e;
+  --chat--color-white: #ffffff;
+  --chat--color-light: #f8f8f8; /* Copilot background */
+  --chat--color-light-shade-50: #f0f0f0;
+  --chat--color-light-shade-100: #e6e6e6;
+  --chat--color-medium: #d2d4d9;
+  --chat--color-dark: #333333; /* Copilot text color */
+  --chat--color-disabled: #777980;
+  --chat--color-typing: #404040;
+
+  /* Base Layout */
+  --chat--spacing: 1rem;
+  --chat--border-radius: 0.75rem; /* Copilot rounded corners */
+  --chat--transition-duration: 0.2s; /* Smooth transitions */
+  --chat--font-family: (
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen-Sans,
+    Ubuntu,
+    Cantarell,
+    'Helvetica Neue',
+    sans-serif
+  );
+
+  /* Window Dimensions */
+  --chat--window--width: 450px; /* Copilot width */
+  --chat--window--height: 650px; /* Copilot height */
+  --chat--window--bottom: var(--chat--spacing);
+  --chat--window--right: var(--chat--spacing);
+  --chat--window--z-index: 9999;
+  --chat--window--border: 1px solid var(--chat--color-light-shade-50);
+  --chat--window--border-radius: 1rem; /* Copilot rounded corners */
+  --chat--window--margin-bottom: var(--chat--spacing);
+  --chat--window--box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Copilot shadow */
+
+  /* Header Styles */
+  --chat--header-height: auto;
+  --chat--header--padding: var(--chat--spacing);
+  --chat--header--background: var(--chat--color-white); /* Copilot white header */
+  --chat--header--color: var(--chat--color-dark);
+  --chat--header--border-top: none;
+  --chat--header--border-bottom: 1px solid var(--chat--color-light-shade-50);
+  --chat--header--border-left: none;
+  --chat--header--border-right: none;
+  --chat--heading--font-size: 1.5rem; /* Copilot heading size */
+  --chat--subtitle--font-size: 0.9rem;
+  --chat--subtitle--line-height: 1.6;
+
+  /* Message Styles */
+  --chat--message--font-size: 0.95rem;
+  --chat--message--padding: 1rem 1.25rem;
+  --chat--message--border-radius: 1.25rem; /* Copilot message bubbles */
+  --chat--message-line-height: 1.6;
+  --chat--message--margin-bottom: calc(var(--chat--spacing) * 0.75);
+  --chat--message--bot--background: var(--chat--color-white);
+  --chat--message--bot--color: var(--chat--color-dark);
+  --chat--message--bot--border: 1px solid var(--chat--color-light-shade-50);
+  --chat--message--user--background: var(--chat--color-primary);
+  --chat--message--user--color: var(--chat--color-white);
+  --chat--message--user--border: none;
+  --chat--message--pre--background: rgba(0, 0, 0, 0.03);
+  --chat--messages-list--padding: 1.25rem;
+
+  /* Toggle Button */
+  --chat--toggle--size: 64px;
+  --chat--toggle--width: var(--chat--toggle--size);
+  --chat--toggle--height: var(--chat--toggle--size);
+  --chat--toggle--border-radius: 50%;
+  --chat--toggle--background: var(--chat--color-primary);
+  --chat--toggle--hover--background: var(--chat--color-primary-shade-50);
+  --chat--toggle--active--background: var(--chat--color-primary-shade-100);
+  --chat--toggle--color: var(--chat--color-white);
+  --chat--toggle--box-shadow: 0 4px 12px rgba(0, 120, 212, 0.3);
+
+  /* Input Area */
+  --chat--textarea--height: 56px; /* Copilot input height */
+  --chat--textarea--max-height: 30rem;
+  --chat--input--font-size: 0.95rem;
+  --chat--input--border: 1px solid var(--chat--color-light-shade-50);
+  --chat--input--border-radius: 1.75rem; /* Copilot rounded input */
+  --chat--input--padding: 1rem 1.25rem;
+  --chat--input--background: var(--chat--color-white);
+  --chat--input--text-color: var(--chat--color-dark);
+  --chat--input--line-height: 1.5;
+  --chat--input--placeholder--font-size: var(--chat--input--font-size);
+  --chat--input--border-active: 2px solid var(--chat--color-primary);
+  --chat--input--left--panel--width: 2.5rem;
+
+  /* Button Styles */
+  --chat--button--color: var(--chat--color-white);
+  --chat--button--background: var(--chat--color-primary);
+  --chat--button--padding: 0.75rem 1.5rem;
+  --chat--button--border-radius: 1.75rem; /* Copilot rounded buttons */
+  --chat--button--hover--color: var(--chat--color-white);
+  --chat--button--hover--background: var(--chat--color-primary-shade-50);
+  --chat--close--button--color-hover: var(--chat--color-primary);
+
+  /* Send and File Buttons */
+  --chat--input--send--button--background: var(--chat--color-primary);
+  --chat--input--send--button--color: var(--chat--color-white);
+  --chat--input--send--button--background-hover: var(--chat--color-primary-shade-50);
+  --chat--input--send--button--color-hover: var(--chat--color-white);
+  --chat--input--file--button--background: var(--chat--color-light);
+  --chat--input--file--button--color: var(--chat--color-secondary);
+  --chat--input--file--button--background-hover: var(--chat--color-light-shade-50);
+  --chat--input--file--button--color-hover: var(--chat--color-secondary-shade-50);
+  --chat--files-spacing: 0.5rem;
+
+  /* Body and Footer */
+  --chat--body--background: var(--chat--color-light);
+  --chat--footer--background: var(--chat--color-white);
+  --chat--footer--color: var(--chat--color-dark);
+  --chat--footer--border-top: 1px solid var(--chat--color-light-shade-50);
+}
+
+/* You can override any class styles, too. Right-click inspect in Chat UI to find class to override. */
+.chat-message {
+	max-width: 85%; /* Copilot message width */
+}
+
+/* Additional Copilot-style enhancements */
+.chat-header {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chat-input {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.chat-toggle {
+	box-shadow: var(--chat--toggle--box-shadow);
+}
+
+/* Copilot-style message animations */
+.chat-message {
+	animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

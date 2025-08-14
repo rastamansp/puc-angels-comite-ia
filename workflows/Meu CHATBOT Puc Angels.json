@@ -1,0 +1,121 @@
+{
+  "name": "Meu CHATBOT Puc Angels",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "options": {
+          "customCss": ":root {\n  /* Colors */\n  --chat--color-primary: #e74266;\n  --chat--color-primary-shade-50: #db4061;\n  --chat--color-primary-shade-100: #cf3c5c;\n  --chat--color-secondary: #20b69e;\n  --chat--color-secondary-shade-50: #1ca08a;\n  --chat--color-white: #ffffff;\n  --chat--color-light: #f2f4f8;\n  --chat--color-light-shade-50: #e6e9f1;\n  --chat--color-light-shade-100: #c2c5cc;\n  --chat--color-medium: #d2d4d9;\n  --chat--color-dark: #101330;\n  --chat--color-disabled: #777980;\n  --chat--color-typing: #404040;\n\n  /* Base Layout */\n  --chat--spacing: 1rem;\n  --chat--border-radius: 0.25rem;\n  --chat--transition-duration: 0.15s;\n  --chat--font-family: (\n    -apple-system,\n    BlinkMacSystemFont,\n    'Segoe UI',\n    Roboto,\n    Oxygen-Sans,\n    Ubuntu,\n    Cantarell,\n    'Helvetica Neue',\n    sans-serif\n  );\n\n  /* Window Dimensions */\n  --chat--window--width: 400px;\n  --chat--window--height: 600px;\n  --chat--window--bottom: var(--chat--spacing);\n  --chat--window--right: var(--chat--spacing);\n  --chat--window--z-index: 9999;\n  --chat--window--border: 1px solid var(--chat--color-light-shade-50);\n  --chat--window--border-radius: var(--chat--border-radius);\n  --chat--window--margin-bottom: var(--chat--spacing);\n\n  /* Header Styles */\n  --chat--header-height: auto;\n  --chat--header--padding: var(--chat--spacing);\n  --chat--header--background: var(--chat--color-dark);\n  --chat--header--color: var(--chat--color-light);\n  --chat--header--border-top: none;\n  --chat--header--border-bottom: none;\n  --chat--header--border-left: none;\n  --chat--header--border-right: none;\n  --chat--heading--font-size: 2em;\n  --chat--subtitle--font-size: inherit;\n  --chat--subtitle--line-height: 1.8;\n\n  /* Message Styles */\n  --chat--message--font-size: 1rem;\n  --chat--message--padding: var(--chat--spacing);\n  --chat--message--border-radius: var(--chat--border-radius);\n  --chat--message-line-height: 1.5;\n  --chat--message--margin-bottom: calc(var(--chat--spacing) * 1);\n  --chat--message--bot--background: var(--chat--color-white);\n  --chat--message--bot--color: var(--chat--color-dark);\n  --chat--message--bot--border: none;\n  --chat--message--user--background: var(--chat--color-secondary);\n  --chat--message--user--color: var(--chat--color-white);\n  --chat--message--user--border: none;\n  --chat--message--pre--background: rgba(0, 0, 0, 0.05);\n  --chat--messages-list--padding: var(--chat--spacing);\n\n  /* Toggle Button */\n  --chat--toggle--size: 64px;\n  --chat--toggle--width: var(--chat--toggle--size);\n  --chat--toggle--height: var(--chat--toggle--size);\n  --chat--toggle--border-radius: 50%;\n  --chat--toggle--background: var(--chat--color-primary);\n  --chat--toggle--hover--background: var(--chat--color-primary-shade-50);\n  --chat--toggle--active--background: var(--chat--color-primary-shade-100);\n  --chat--toggle--color: var(--chat--color-white);\n\n  /* Input Area */\n  --chat--textarea--height: 50px;\n  --chat--textarea--max-height: 30rem;\n  --chat--input--font-size: inherit;\n  --chat--input--border: 0;\n  --chat--input--border-radius: 0;\n  --chat--input--padding: 0.8rem;\n  --chat--input--background: var(--chat--color-white);\n  --chat--input--text-color: initial;\n  --chat--input--line-height: 1.5;\n  --chat--input--placeholder--font-size: var(--chat--input--font-size);\n  --chat--input--border-active: 0;\n  --chat--input--left--panel--width: 2rem;\n\n  /* Button Styles */\n  --chat--button--color: var(--chat--color-light);\n  --chat--button--background: var(--chat--color-primary);\n  --chat--button--padding: calc(var(--chat--spacing) * 1 / 2) var(--chat--spacing);\n  --chat--button--border-radius: var(--chat--border-radius);\n  --chat--button--hover--color: var(--chat--color-light);\n  --chat--button--hover--background: var(--chat--color-primary-shade-50);\n  --chat--close--button--color-hover: var(--chat--color-primary);\n\n  /* Send and File Buttons */\n  --chat--input--send--button--background: var(--chat--color-white);\n  --chat--input--send--button--color: var(--chat--color-light);\n  --chat--input--send--button--background-hover: var(--chat--color-primary-shade-50);\n  --chat--input--send--button--color-hover: var(--chat--color-secondary-shade-50);\n  --chat--input--file--button--background: var(--chat--color-white);\n  --chat--input--file--button--color: var(--chat--color-secondary);\n  --chat--input--file--button--background-hover: var(--chat--input--file--button--background);\n  --chat--input--file--button--color-hover: var(--chat--color-secondary-shade-50);\n  --chat--files-spacing: 0.25rem;\n\n  /* Body and Footer */\n  --chat--body--background: var(--chat--color-light);\n  --chat--footer--background: var(--chat--color-light);\n  --chat--footer--color: var(--chat--color-dark);\n}\n\n\n/* You can override any class styles, too. Right-click inspect in Chat UI to find class to override. */\n.chat-message {\n\tmax-width: 50%;\n}",
+          "responseMode": "lastNode"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -576,
+        -48
+      ],
+      "id": "f56be2f3-4b02-4736-8aa1-4acd23459042",
+      "name": "When chat message received",
+      "webhookId": "50b7645d-b940-4465-917d-ad0923b0d568"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "Seja um instrutor do Treinamento da Puc Angels, abaixo o treinamento de hoje como base de conhecimento\n\n# 🚀 Workshop: Criando Chatbot de IA com N8N\n\n## 📋 Sobre o Workshop\n\n**Tema:** Criando Chatbot de IA com N8N  \n**Organização:** PUC Angels - Aceleradora de Startups  \n**Instituição:** Pontifícia Universidade Católica do Brasil  \n**Data:** 14/08/2024 às 19h  \n**Formato:** Online via Google Meet  \n**Duração:** 1h30min (1h de conteúdo + 30min Q&A)  \n**Link:** [https://meet.google.com/ryv-quwh-bhy?authuser=0](https://meet.google.com/ryv-quwh-bhy?authuser=0)\n\n## 🎯 Objetivos do Workshop\n\n- **Compreender** os fundamentos de chatbots de IA e automação\n- **Explorar** a plataforma N8N para automação de workflows\n- **Implementar** um chatbot funcional com integração de IA\n- **Integrar** ferramentas externas (Azure OpenAI, Pinecone, Google Sheets, Notion)\n- **Aplicar** conceitos práticos em um projeto real\n\n## 🎓 Público-Alvo\n\n- Empreendedores e startups da PUC Angels\n- Desenvolvedores interessados em IA e automação\n- Profissionais de marketing e atendimento ao cliente\n- Estudantes de tecnologia e inovação\n- Qualquer pessoa interessada em chatbots e automação\n\n## 📚 Pré-requisitos\n\n- Conhecimento básico de programação (recomendado)\n- Familiaridade com APIs e integrações (opcional)\n- Conta no GitHub (para versionamento)\n- Acesso à internet durante o workshop\n\n## 🔧 Configuração Prévia dos Serviços\n\n**⚠️ IMPORTANTE:** Como o workshop será online e hands-on, é **OBRIGATÓRIO** criar as contas nos serviços abaixo **ANTES** do evento para acompanhar as demonstrações práticas.\n\n### **1. Azure OpenAI (Obrigatório)**\n- **Objetivo:** Gerar token de acesso à API de IA\n- **Passos:**\n  1. Acesse [portal.azure.com](https://portal.azure.com)\n  2. Crie um novo recurso \"OpenAI\"\n  3. Configure a região e plano de preços\n  4. Anote a **chave da API** e **endpoint**\n- **Tempo estimado:** 15-20 minutos\n- **Custo:** Plano gratuito disponível\n\n### **2. N8N (Obrigatório)**\n- **Objetivo:** Criar workflows junto com o instrutor\n- **Passos:**\n  1. Acesse [n8n.io](https://n8n.io)\n  2. Clique em \"Get Started for Free\"\n  3. Crie uma conta gratuita\n  4. Faça login e acesse o dashboard\n- **Tempo estimado:** 5 minutos\n- **Custo:** Gratuito para uso básico\n\n### **3. Pinecone (Obrigatório)**\n- **Objetivo:** Criar index para consultas RAG no Agente de IA\n- **Passos:**\n  1. Acesse [pinecone.io](https://pinecone.io)\n  2. Clique em \"Get Started Free\"\n  3. Crie uma conta gratuita\n  4. Crie um novo **index** (anote o nome)\n  5. Anote a **API Key** e **Environment**\n- **Tempo estimado:** 10-15 minutos\n- **Custo:** Plano gratuito disponível\n\n### **4. Notion (Opcional mas Recomendado)**\n- **Objetivo:** Integração com N8N para leitura/escrita de documentos\n- **Passos:**\n  1. Acesse [notion.so](https://notion.so)\n  2. Crie uma conta gratuita\n  3. Crie um workspace\n  4. Crie um documento de teste\n  5. **Crie uma integração:** Acesse [https://www.notion.so/profile/integrations/form/new-integration](https://www.notion.so/profile/integrations/form/new-integration)\n  6. Configure a integração:\n     - Nome: \"N8N Chatbot Integration\"\n     - Descrição: \"Integração para chatbot com N8N\"\n     - Selecione o workspace criado\n     - Anote o **Internal Integration Token**\n  7. Compartilhe o documento com a integração (será explicado no workshop)\n- **Tempo estimado:** 15-20 minutos\n- **Custo:** Gratuito para uso básico\n\n### **📋 Checklist de Preparação**\n- [ ] Conta Azure OpenAI criada e API Key anotada\n- [ ] Conta N8N criada e acessível\n- [ ] Conta Pinecone criada com index configurado\n- [ ] Conta Notion criada (opcional)\n- [ ] **Integração Notion criada e Internal Integration Token anotado**\n- [ ] Todas as credenciais organizadas e acessíveis\n- [ ] Conexão de internet estável para o workshop\n\n## 🛠️ Ferramentas e Tecnologias\n\n### Plataforma Principal\n- **N8N** - Plataforma de automação de workflows\n\n### Serviços de IA\n- **Azure OpenAI** - Modelos de linguagem e embeddings\n- **Pinecone** - Banco de dados vetorial\n\n### Integrações\n- **Google Sheets** - Armazenamento de dados\n- **Notion** - Leitura e escrita de documentos\n- **Sistemas de memória** - Gerenciamento de contexto\n\n## 📖 Conteúdo Programático\n\n### **📱 Formato Online e Hands-on**\n- **Workshop 100% prático** - Todos os participantes criarão junto com o instrutor\n- **Formato colaborativo** - Compartilhamento de tela e acompanhamento em tempo real\n- **Suporte individual** - Dúvidas respondidas durante a execução\n- **Material compartilhado** - Todos os recursos disponíveis para download\n\n### **Apresentação e Introdução (5min)**\n- Apresentação do instrutor Pedro Almeida\n- Visão geral do workshop e objetivos\n- Contexto da PUC Angels e inovação\n- Verificação de contas e configurações dos participantes\n\n### **Módulo 1: Fundamentos e N8N (25min)**\n- Introdução aos chatbots de IA\n- Visão geral da plataforma N8N\n- **Linha do Tempo de Conceitos Fundamentais:**\n  - **RAG (Retrieval-Augmented Generation)** - Combinação de busca e geração\n  - **Embeddings** - Representação vetorial de texto\n  - **Memória de Histórico de Chat** - Contexto de conversas\n  - **Banco de Dados Vetorial** - Armazenamento de embeddings\n  - **Consulta Vetorial** - Busca por similaridade semântica\n  - **Tools de Agente de IA** - Ferramentas especializadas\n  - **LLMs (Large Language Models)** - Modelos de linguagem\n  - **Prompt Engineering** - Otimização de instruções\n- Arquitetura de chatbots inteligentes\n- Casos de uso e aplicações práticas\n\n### **Módulo 2: Construindo o Chatbot (30min)**\n- Configuração rápida do ambiente\n- Criação do workflow principal\n- Implementação do trigger de mensagens\n- Configuração do agente de IA e integrações\n- Demonstração prática do chatbot \"Marley\"\n\n### **Sessão de Perguntas e Respostas (30min)**\n- Dúvidas sobre o conteúdo apresentado\n- Discussão sobre casos de uso específicos\n- Networking e troca de experiências\n- Próximos passos e recursos adicionais\n\n## 🏗️ Arquitetura do Projeto\n\n### Componentes Principais\n1. **Trigger Node** - Recebimento de mensagens\n2. **AI Agent** - Orquestração e inteligência\n3. **Chat Model** - Processamento de linguagem natural\n4. **Memory System** - Gerenciamento de contexto\n5. **Vector Store** - Busca semântica\n6. **External Tools** - Integrações específicas\n\n## 🧠 Conceitos Fundamentais da IA\n\n### **📅 Ordem Cronológica de Apresentação (15min)**\n\n#### **1. RAG (Retrieval-Augmented Generation) - 2min**\n- **Definição:** Técnica que combina busca de informações com geração de texto\n- **Funcionamento:** Busca dados relevantes antes de gerar respostas\n- **Vantagem:** Respostas mais precisas e baseadas em fatos\n- **Aplicação:** Chatbots que consultam bases de conhecimento\n\n#### **2. Embeddings - 2min**\n- **Definição:** Representação numérica (vetorial) de texto\n- **Funcionamento:** Converte palavras/frases em números para comparação\n- **Vantagem:** Permite busca por similaridade semântica\n- **Aplicação:** Pinecone, OpenAI Embeddings\n\n#### **3. Memória de Histórico de Chat - 2min**\n- **Definição:** Sistema que mantém contexto das conversas\n- **Funcionamento:** Armazena interações anteriores\n- **Vantagem:** Chatbot \"lembra\" do que foi discutido\n- **Aplicação:** Simple Memory no N8N\n\n#### **4. Banco de Dados Vetorial - 2min**\n- **Definição:** Sistema especializado em armazenar e buscar embeddings\n- **Funcionamento:** Indexa vetores para busca rápida por similaridade\n- **Vantagem:** Busca eficiente em grandes volumes de dados\n- **Aplicação:** Pinecone Vector Store\n\n#### **5. Consulta Vetorial - 2min**\n- **Definição:** Busca por similaridade entre vetores de texto\n- **Funcionamento:** Compara embeddings para encontrar conteúdo relacionado\n- **Vantagem:** Encontra informações mesmo com palavras diferentes\n- **Aplicação:** Busca semântica na base de conhecimento\n\n#### **6. Tools de Agente de IA - 2min**\n- **Definição:** Ferramentas especializadas que o agente pode usar\n- **Funcionamento:** Extendem as capacidades do chatbot\n- **Vantagem:** Permite ações específicas (Google Sheets, APIs)\n- **Aplicação:** gwan_q, sheets, integrações externas\n\n#### **7. LLMs (Large Language Models) - 2min**\n- **Definição:** Modelos de linguagem treinados com grandes volumes de texto\n- **Funcionamento:** Processam e geram texto natural\n- **Vantagem:** Compreensão e geração de linguagem humana\n- **Aplicação:** Azure OpenAI GPT, Claude, modelos de chat\n\n#### **8. Prompt Engineering - 1min**\n- **Definição:** Arte de criar instruções eficazes para LLMs\n- **Funcionamento:** Estrutura comandos para obter respostas desejadas\n- **Vantagem:** Melhora qualidade e relevância das respostas\n- **Aplicação:** Instruções para o AI Agent\n\n### **💡 Dicas de Apresentação para Cada Conceito**\n\n#### **RAG (2min)**\n- **Exemplo prático:** \"Imagine que você pergunta sobre um produto e o chatbot busca na base de conhecimento antes de responder\"\n- **Analogia:** \"Como um assistente que consulta um manual antes de dar uma resposta\"\n- **Demonstração:** Mostrar como o chatbot \"Marley\" busca informações sobre Junior Dread\n\n#### **Embeddings (2min)**\n- **Exemplo prático:** \"Palavras como 'carro' e 'automóvel' geram vetores similares\"\n- **Analogia:** \"Como um tradutor que converte palavras em coordenadas numéricas\"\n- **Demonstração:** Mostrar como o OpenAI converte texto em números\n\n#### **Memória de Chat (2min)**\n- **Exemplo prático:** \"O chatbot lembra que você já perguntou sobre shows\"\n- **Analogia:** \"Como uma conversa com alguém que se lembra do que vocês falaram antes\"\n- **Demonstração:** Mostrar o Simple Memory no N8N\n\n#### **Banco Vetorial (2min)**\n- **Exemplo prático:** \"Pinecone armazena milhões de embeddings para busca rápida\"\n- **Analogia:** \"Como um índice de livro, mas para encontrar conteúdo similar\"\n- **Demonstração:** Mostrar a interface do Pinecone\n\n#### **Consulta Vetorial (2min)**\n- **Exemplo prático:** \"Buscar por 'música reggae' encontra 'Junior Dread' mesmo sem mencionar o nome\"\n- **Analogia:** \"Como encontrar pessoas com interesses similares em uma rede social\"\n- **Demonstração:** Mostrar busca semântica na base de dados\n\n#### **Tools de IA (2min)**\n- **Exemplo prático:** \"O chatbot pode salvar contatos no Google Sheets e criar documentos no Notion automaticamente\"\n- **Analogia:** \"Como dar superpoderes ao chatbot para ações específicas\"\n- **Demonstração:** Mostrar integração com Google Sheets e Notion\n\n#### **LLMs (2min)**\n- **Exemplo prático:** \"Azure OpenAI GPT-4 entende e responde em português naturalmente\"\n- **Analogia:** \"Como ter uma conversa com alguém muito inteligente e bem informado\"\n- **Demonstração:** Mostrar resposta do Azure OpenAI no N8N\n\n#### **Prompt Engineering (1min)**\n- **Exemplo prático:** \"Instruções claras geram respostas mais precisas\"\n- **Analogia:** \"Como fazer uma pergunta bem formulada para obter a resposta certa\"\n- **Demonstração:** Mostrar o prompt do AI Agent\n\n\n\n### Fluxo de Dados\n```\nMensagem → AI Agent → Processamento → Resposta\n    ↓           ↓           ↓\n  Trigger  Azure OpenAI  Pinecone\n    ↓           ↓           ↓\n  N8N      Chat Model  Vector DB\n    ↓           ↓           ↓\n  Notion   Google Sheets  Memory\n```\n\n## 📁 Estrutura do Projeto\n\n```\nworkshop-chatbot-n8n/\n├── README.md\n├── prompt.md\n├── slides/\n│   ├── modulo1-fundamentos.md\n│   ├── modulo2-configuracao.md\n│   ├── modulo3-construcao.md\n│   ├── modulo4-avancado.md\n│   └── modulo5-deploy.md\n├── exemplos/\n│   ├── workflow-basico.json\n│   ├── workflow-avancado.json\n│   └── configuracao.env\n├── exercicios/\n│   ├── exercicio1-setup.md\n│   ├── exercicio2-workflow.md\n│   └── exercicio3-integracao.md\n└── recursos/\n    ├── links-uteis.md\n    ├── troubleshooting.md\n    └── next-steps.md\n```\n\n## 🎯 Projeto Prático: Chatbot \"Marley\"\n\n### Descrição\nImplementação de um chatbot profissional chamado **Marley** para gerenciamento de negócios do artista brasileiro Junior Dread.\n\n### Funcionalidades\n- **Consultas de IA** via `gwan_q` (base de conhecimento)\n- **Armazenamento** de contatos via Google Sheets\n- **Gestão de documentos** via Notion\n- **Memória contextual** para conversas\n- **Busca semântica** na base de dados\n\n### Casos de Uso\n- Agendamento de shows\n- Contatos de imprensa\n- Informações sobre o artista\n- Gestão de parcerias\n- **Gestão de documentos** (contratos, propostas, materiais promocionais)\n- **Base de conhecimento** estruturada no Notion\n\n## 📋 Checklist de Preparação\n\n### Antes do Workshop\n- [ ] Contas criadas (Azure OpenAI, Pinecone, N8N, Notion)\n- [ ] N8N acessível via web\n- [ ] APIs configuradas e testadas\n- [ ] Materiais preparados\n- [ ] Ambiente de desenvolvimento configurado\n- [ ] Link do Google Meet salvo e testado\n\n### Durante o Workshop\n- [ ] Apresentação dos conceitos\n- [ ] Demonstração prática\n- [ ] Exercícios hands-on\n- [ ] Resolução de dúvidas\n- [ ] Feedback dos participantes\n\n### Após o Workshop\n- [ ] Compartilhamento de materiais\n- [ ] Acesso aos recursos\n- [ ] Suporte pós-workshop\n- [ ] Avaliação e feedback\n\n## 🔗 Recursos Adicionais\n\n### Documentação\n- [N8N Documentation](https://docs.n8n.io/)\n- [Azure OpenAI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)\n- [Pinecone Documentation](https://docs.pinecone.io/)\n- [Notion API Documentation](https://developers.notion.com/)\n\n### Comunidade\n- [N8N Community](https://community.n8n.io/)\n- [PUC Angels Network](https://pucangels.com.br/)\n\n### 📚 Materiais do Workshop\n- [Glossário de IA](glossario-ia.md) - Conceitos e definições completas\n- [Prompt do Chatbot](prompt.md) - Instruções para o AI Agent\n\n## 📞 Suporte e Contato\n\n- **Organizador:** Pedro Almeida\n- **Email:** pedro.almeida@pucangels.org\n- **GitHub:** [@rastamansp](https://github.com/rastamansp)\n- **LinkedIn:** [Pedro Almeida](https://www.linkedin.com/in/pedro-halmeida/)\n\n## 📝 Notas para o Instrutor\n\n### Pontos de Atenção\n- Verificar conectividade de internet\n- Ter contas de backup para as APIs\n- Preparar exemplos de fallback\n- Cronometrar rigorosamente: 5min + 25min + 30min + 30min\n- Manter o foco no conteúdo essencial para o tempo limitado\n\n### Adaptações\n- Manter o cronograma rigoroso devido ao tempo limitado\n- Focar em demonstrações práticas e casos de uso reais\n- Encorajar perguntas durante a sessão de Q&A\n- Fornecer materiais complementares para estudo posterior\n- Priorizar o que é essencial para entender e implementar um chatbot básico\n\n---\n\n**🎉 Prepare-se para uma jornada incrível no mundo da automação e IA!**\n\n*Este workshop foi desenvolvido para a PUC Angels, combinando teoria e prática para criar soluções reais de chatbot inteligente.*\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -336,
+        -64
+      ],
+      "id": "fffbd661-24c1-4db5-a14c-8c3d9ae4c272",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -496,
+        192
+      ],
+      "id": "543b3be7-51a7-43fe-85bd-0210281cd972",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "6SIwID2OFtiK1fM0",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -304,
+        192
+      ],
+      "id": "ef43e0e4-046b-4358-9e5d-e0f7ef60b2af",
+      "name": "Simple Memory"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "4a330477-dffe-4144-9152-40e41d897ae4",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "03c73b63e8fc05150a595bdf093e08bf089f2c024488a3efab14f8512d13a837"
+  },
+  "id": "s8lipOzvY0eITY8u",
+  "tags": []
+}
